@@ -10,5 +10,9 @@
     {
         "author": "Brett",
         "text": "Hello world!"
+    },
+    {
+        "author": "Randy",
+        "text": "This appeared live!"
     }
 ]

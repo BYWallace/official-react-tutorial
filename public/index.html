@@ -20,12 +20,9 @@
         {author: "Brett Wallace", text: "This is another comment"}
       ];
 
-      // tutorial13.js
+      // tutorial14.js
       var CommentBox = React.createClass({
-        getInitialState: function() {
-          return {data: []};
-        },
-        componentDidMount: function() {
+        loadCommentsFromServer: function() {
           $.ajax({
             url: this.props.url,
             dataType: 'json',
@@ -34,6 +31,13 @@
               this.setState({data: data});
             }.bind(this)
           });
+        },
+        getInitialState: function() {
+          return {data: []};
+        },
+        componentDidMount: function() {
+          this.loadCommentsFromServer();
+          setInterval(this.loadCommentsFromServer, this.props.pollInterval);
         },
         render: function() {
           return (
@@ -96,7 +100,7 @@
 
       // tutorial11.js
       ReactDOM.render(
-        <CommentBox url="/api/comments" />,
+        <CommentBox url="/api/comments" pollInterval={2000} />,
         document.getElementById('content')
       );
     </script>
