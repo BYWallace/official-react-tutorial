@@ -26,5 +26,9 @@
     {
         "author": "Hello",
         "text": "World"
+    },
+    {
+        "author": "Optimistic",
+        "text": "This comment loads before the ajax request!"
     }
 ]
