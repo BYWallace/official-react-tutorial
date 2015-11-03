@@ -14,5 +14,17 @@
     {
         "author": "Randy",
         "text": "This appeared live!"
+    },
+    {
+        "author": "Tester",
+        "text": "This is a test!"
+    },
+    {
+        "author": "Another Tester",
+        "text": "Testing the log"
+    },
+    {
+        "author": "Hello",
+        "text": "World"
     }
 ]
